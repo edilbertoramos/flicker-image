@@ -1,5 +1,5 @@
 
-# FlickrImage
+# Flickr Image
 Display flicker images
 
 ## Interface
@@ -30,7 +30,11 @@ Display flicker images
 _Empty_
 
 # Observations
-- Dealing with the **decription** attribute
-- Dealing with the **image dimensions**
-- Dealing with **request cancellation**
+- Handling with the **image dimensions**
+- Handling with **request cancellation**
 - Simplify function  **download(url: String, to localUrl: String) async throws -> ServiceResult\<URL\>** 
+- Add acessibility
+- Increasing Unit Test coverage
+- Add UI Tests
+- Add button to share image and metadata
+- Add animated transition
