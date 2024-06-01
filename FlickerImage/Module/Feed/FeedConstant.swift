@@ -18,6 +18,7 @@ struct FeedConstant {
         static let emptyTitle = "Empty title"
         static let title = "Title"
         static let description = "Description"
+        static let descriptionNotLoaded = "Description not loaded"
         static let author = "Author"
         static let publishedDate = "Published date"
     }

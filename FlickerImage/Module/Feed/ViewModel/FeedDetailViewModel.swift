@@ -21,6 +21,11 @@ class FeedDetailViewModel: ObservableObject, FeedResourceProtocol {
         guard item.title.isEmpty else { return item.title }
         return Label.emptyTitle
     }
+
+    var description: String {
+        let extractedText = extractTextBetweenPTags(from: item.description)
+        return extractedText.last ?? Label.descriptionNotLoaded
+    }
     
     var publishedDate: String {
         let date = dateFormatter.date(from: item.published)
@@ -29,6 +34,24 @@ class FeedDetailViewModel: ObservableObject, FeedResourceProtocol {
     
     init(item: FeedItem) {
         self.item = item
+    }
+    
+    func extractTextBetweenPTags(from htmlString: String) -> [String] {
+        do {
+            let pattern = "<p>(.*?)</p>"
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            let results = regex.matches(
+                in: htmlString,
+                options: [],
+                range: NSRange(htmlString.startIndex..., in: htmlString)
+            )
+            return results.map {
+                String(htmlString[Range($0.range(at: 1), in: htmlString)!])
+            }
+        } catch let error {
+            print("Invalid regex: \(error.localizedDescription)")
+            return []
+        }
     }
     
 }

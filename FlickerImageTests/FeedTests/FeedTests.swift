@@ -21,5 +21,11 @@ final class FeedTests: XCTestCase {
             XCTAssertThrowsError(error)
         }
     }
+    
+    func testDescriptionParse() {
+        let description = "São Paulo, 06 de Maio de 2024 - Campanha do dia Mundial da Asma, que acontece na calçada da Fiesp, na avenida Paulista."
+        let viewModel = FeedDetailViewModel(item: FeedItem.mock)
+        XCTAssertTrue(viewModel.description == description)
+    }
 
 }

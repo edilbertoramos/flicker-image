@@ -38,7 +38,7 @@ struct FeedDetailView: View, FeedResourceProtocol {
             VStack(spacing: 24) {
                 row(Label.title, value: viewModel.title)
                 
-                row(Label.description, value: viewModel.item.description)
+                row(Label.description, value: viewModel.description)
                 
                 row(Label.author, value: viewModel.item.author)
                 
