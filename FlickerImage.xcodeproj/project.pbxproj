@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EB448A542C0B8CFB00759436 /* FeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A532C0B8CFB00759436 /* FeedTests.swift */; };
+		EB448A572C0B954400759436 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A562C0B954400759436 /* FeedView.swift */; };
+		EB448A5A2C0B9C9900759436 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A592C0B9C9900759436 /* FeedViewModel.swift */; };
+		EB448A632C0BA18300759436 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A622C0BA18300759436 /* ImageDetailView.swift */; };
+		EB448A652C0BA19B00759436 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A642C0BA19B00759436 /* ImageDetailViewModel.swift */; };
+		EB448A672C0BA56000759436 /* FeedConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A662C0BA56000759436 /* FeedConstant.swift */; };
+		EB448A692C0BA61300759436 /* FeedResourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A682C0BA61300759436 /* FeedResourceProtocol.swift */; };
 		EBAABAB42C0B842800071463 /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABAB32C0B842800071463 /* ServiceHelper.swift */; };
 		EBAABAB62C0B845B00071463 /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABAB52C0B845B00071463 /* ServiceEndpoint.swift */; };
 		EBAABAB82C0B847000071463 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABAB72C0B847000071463 /* ServiceError.swift */; };
@@ -46,6 +52,12 @@
 
 /* Begin PBXFileReference section */
 		EB448A532C0B8CFB00759436 /* FeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTests.swift; sourceTree = "<group>"; };
+		EB448A562C0B954400759436 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		EB448A592C0B9C9900759436 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		EB448A622C0BA18300759436 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		EB448A642C0BA19B00759436 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		EB448A662C0BA56000759436 /* FeedConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConstant.swift; sourceTree = "<group>"; };
+		EB448A682C0BA61300759436 /* FeedResourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResourceProtocol.swift; sourceTree = "<group>"; };
 		EBAABAB32C0B842800071463 /* ServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		EBAABAB52C0B845B00071463 /* ServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
 		EBAABAB72C0B847000071463 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
@@ -101,6 +113,24 @@
 			path = FeedTests;
 			sourceTree = "<group>";
 		};
+		EB448A552C0B953800759436 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB448A562C0B954400759436 /* FeedView.swift */,
+				EB448A622C0BA18300759436 /* ImageDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB448A582C0B9C9000759436 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB448A592C0B9C9900759436 /* FeedViewModel.swift */,
+				EB448A642C0BA19B00759436 /* ImageDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EBAABAB12C0B840A00071463 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +162,9 @@
 		EBAABAC12C0B87AC00071463 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				EB448A662C0BA56000759436 /* FeedConstant.swift */,
+				EB448A582C0B9C9000759436 /* ViewModel */,
+				EB448A552C0B953800759436 /* View */,
 				EBAABAC52C0B882E00071463 /* Model */,
 				EBAABAC22C0B87C300071463 /* Protocol */,
 				EBAABACC2C0B895500071463 /* Service */,
@@ -143,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				EBAABAC32C0B87F700071463 /* FeedServiceProtocol.swift */,
+				EB448A682C0BA61300759436 /* FeedResourceProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -354,18 +388,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB448A5A2C0B9C9900759436 /* FeedViewModel.swift in Sources */,
 				EBAABAB82C0B847000071463 /* ServiceError.swift in Sources */,
 				EBAABABA2C0B848D00071463 /* ServiceMethod.swift in Sources */,
 				EBAABABC2C0B84B300071463 /* ServiceResult.swift in Sources */,
 				EBAABAC42C0B87F700071463 /* FeedServiceProtocol.swift in Sources */,
 				EBADC4A92C0B7BC8000BA89D /* ContentView.swift in Sources */,
 				EBAABACE2C0B895F00071463 /* FeedService.swift in Sources */,
+				EB448A652C0BA19B00759436 /* ImageDetailViewModel.swift in Sources */,
 				EBADC4A72C0B7BC8000BA89D /* FlickerImageApp.swift in Sources */,
+				EB448A692C0BA61300759436 /* FeedResourceProtocol.swift in Sources */,
 				EBAABAB62C0B845B00071463 /* ServiceEndpoint.swift in Sources */,
 				EBAABAC72C0B884C00071463 /* FeedResult.swift in Sources */,
 				EBAABAC92C0B88DD00071463 /* FeedItem.swift in Sources */,
+				EB448A572C0B954400759436 /* FeedView.swift in Sources */,
 				EBAABAB42C0B842800071463 /* ServiceHelper.swift in Sources */,
 				EBAABACB2C0B890E00071463 /* FeedItemMedia.swift in Sources */,
+				EB448A632C0BA18300759436 /* ImageDetailView.swift in Sources */,
+				EB448A672C0BA56000759436 /* FeedConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
