@@ -27,7 +27,7 @@
 		EBAABAC92C0B88DD00071463 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABAC82C0B88DD00071463 /* FeedItem.swift */; };
 		EBAABACB2C0B890E00071463 /* FeedItemMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABACA2C0B890E00071463 /* FeedItemMedia.swift */; };
 		EBAABACE2C0B895F00071463 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABACD2C0B895F00071463 /* FeedService.swift */; };
-		EBADC4A72C0B7BC8000BA89D /* FlickerImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBADC4A62C0B7BC8000BA89D /* FlickerImageApp.swift */; };
+		EBADC4A72C0B7BC8000BA89D /* FlickrImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBADC4A62C0B7BC8000BA89D /* FlickrImageApp.swift */; };
 		EBADC4A92C0B7BC8000BA89D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBADC4A82C0B7BC8000BA89D /* ContentView.swift */; };
 		EBADC4AB2C0B7BC9000BA89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBADC4AA2C0B7BC9000BA89D /* Assets.xcassets */; };
 		EBADC4AE2C0B7BC9000BA89D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBADC4AD2C0B7BC9000BA89D /* Preview Assets.xcassets */; };
@@ -75,7 +75,7 @@
 		EBAABACA2C0B890E00071463 /* FeedItemMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMedia.swift; sourceTree = "<group>"; };
 		EBAABACD2C0B895F00071463 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		EBADC4A32C0B7BC8000BA89D /* FlickerImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBADC4A62C0B7BC8000BA89D /* FlickerImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerImageApp.swift; sourceTree = "<group>"; };
+		EBADC4A62C0B7BC8000BA89D /* FlickrImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageApp.swift; sourceTree = "<group>"; };
 		EBADC4A82C0B7BC8000BA89D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBADC4AA2C0B7BC9000BA89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBADC4AD2C0B7BC9000BA89D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		EBADC4A52C0B7BC8000BA89D /* FlickerImage */ = {
 			isa = PBXGroup;
 			children = (
-				EBADC4A62C0B7BC8000BA89D /* FlickerImageApp.swift */,
+				EBADC4A62C0B7BC8000BA89D /* FlickrImageApp.swift */,
 				EBADC4A82C0B7BC8000BA89D /* ContentView.swift */,
 				EBADC4AA2C0B7BC9000BA89D /* Assets.xcassets */,
 				EBAABAB12C0B840A00071463 /* Core */,
@@ -415,7 +415,7 @@
 				EBADC4A92C0B7BC8000BA89D /* ContentView.swift in Sources */,
 				EBAABACE2C0B895F00071463 /* FeedService.swift in Sources */,
 				EB448A652C0BA19B00759436 /* FeedDetailViewModel.swift in Sources */,
-				EBADC4A72C0B7BC8000BA89D /* FlickerImageApp.swift in Sources */,
+				EBADC4A72C0B7BC8000BA89D /* FlickrImageApp.swift in Sources */,
 				EB448A692C0BA61300759436 /* FeedResourceProtocol.swift in Sources */,
 				EBAABAB62C0B845B00071463 /* ServiceEndpoint.swift in Sources */,
 				EBAABAC72C0B884C00071463 /* FeedResult.swift in Sources */,
@@ -593,6 +593,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Flickr;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -622,6 +623,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Flickr;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
