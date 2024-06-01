@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FeedView: View, FeedResourceProtocol {
     
-    @State private var seachText: String = ""
+    @StateObject private var viewModel = FeedViewModel()
     @State private var displayDetail: Bool = false
     @State private var columns: [GridItem] = Array(
         repeating: GridItem(
@@ -18,8 +18,6 @@ struct FeedView: View, FeedResourceProtocol {
         ),
         count: 3
     )
-    
-    @ObservedObject private var viewModel = FeedViewModel()
 
     var body: some View {
         NavigationStack {
@@ -34,35 +32,29 @@ struct FeedView: View, FeedResourceProtocol {
             .navigationTitle(Label.flickr)
         }
         .navigationBarTitleDisplayMode(.large)
-        .searchable(text: $seachText)
+        .searchable(text: $viewModel.seachText)
         .sheet(isPresented: $displayDetail) {
-            ImageDetailView(
-                viewModel: ImageDetailViewModel(
-                    title: String(viewModel.items[viewModel.selectedItem])
-                )
-            )
+            if let item = viewModel.selectedItem {
+                FeedDetailView(viewModel: FeedDetailViewModel(item: item))
+            }
         }
     }
     
     var grid: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 2) {
-            ForEach(viewModel.items.indices, id: \.self) { index in
-                if viewModel.items.indices.contains(index) {
-                    Image(systemName: "xmark")
-                        .frame(
-                            maxWidth: .infinity,
-                            minHeight: 40,
-                            maxHeight: 120,
-                            alignment: .center
-                        )
-                        .padding(32)
-                        .background(.gray)
-                        .onTapGesture {
-                            viewModel.selectedItem = index
-                            displayDetail.toggle()
-                        }
-
-                }
+            ForEach(viewModel.items, id: \.media.m) { item in
+                FeedImageView(item: item)
+                    .frame(
+                        maxWidth: .infinity,
+                        minHeight: 100,
+                        maxHeight: 100,
+                        alignment: .center
+                    )
+                    .background(Color.gray.opacity(0.3))
+                    .onTapGesture {
+                        viewModel.selectedItem = item
+                        displayDetail.toggle()
+                    }
             }
         }
     }

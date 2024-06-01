@@ -55,6 +55,71 @@ public extension ServiceHelper {
             urlSessionTask.resume()
         }
     }
+    
+    static func download(url: String, to localUrl: String) async throws -> ServiceResult<URL> {
+        guard let url = URL(string: url) else {
+            throw ServiceError.invalidImageUrl
+        }
+        
+        guard let localUrl = URL(string: localUrl) else {
+            throw ServiceError.invalidLocalImageUrl
+        }
+        
+        #if DEBUG
+        print("Download URL: \(url)")
+        print("Local URL: \(localUrl)")
+        #endif
+        return try await withUnsafeThrowingContinuation { continuation in
+            guard !FileManager.default.fileExists(atPath: localUrl.path) else {
+                do {
+                    let imageData = try BucketHelper.shared.loadImageData(for: localUrl)
+                    continuation.resume(
+                        returning: (imageData, .success(localUrl))
+                    )
+                } catch {
+                    #if DEBUG
+                    print("Error loading file")
+                    #endif
+                    continuation.resume(throwing: error)
+                }
+                return
+            }
+            let task  = URLSession.shared.downloadTask(with: url) { tempUrl, _, error in
+                guard let tempUrl = tempUrl, error == nil else {
+                    #if DEBUG
+                    print("Error downloading file: \(error!)")
+                    #endif
+                    continuation.resume(throwing: error!)
+                    return
+                }
+                do {
+                    if !FileManager.default.fileExists(atPath: localUrl.path) {
+                        try FileManager.default.copyItem(at: tempUrl, to: localUrl)
+                    }
+                } catch {
+                    #if DEBUG
+                    print("Error moving file to actual file")
+                    #endif
+                    continuation.resume(throwing: error)
+                }
+                #if DEBUG
+                print("Downloaded file \(url)")
+                #endif
+                do {
+                    let imageData = try BucketHelper.shared.loadImageData(for: localUrl)
+                    continuation.resume(
+                        returning: (imageData, .success(localUrl))
+                    )
+                } catch {
+                    #if DEBUG
+                    print("Error loading file")
+                    #endif
+                    continuation.resume(throwing: error)
+                }
+            }
+            task.resume()
+        }
+    }
 
 }
 

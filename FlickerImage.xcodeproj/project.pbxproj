@@ -10,10 +10,13 @@
 		EB448A542C0B8CFB00759436 /* FeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A532C0B8CFB00759436 /* FeedTests.swift */; };
 		EB448A572C0B954400759436 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A562C0B954400759436 /* FeedView.swift */; };
 		EB448A5A2C0B9C9900759436 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A592C0B9C9900759436 /* FeedViewModel.swift */; };
-		EB448A632C0BA18300759436 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A622C0BA18300759436 /* ImageDetailView.swift */; };
-		EB448A652C0BA19B00759436 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A642C0BA19B00759436 /* ImageDetailViewModel.swift */; };
+		EB448A632C0BA18300759436 /* FeedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A622C0BA18300759436 /* FeedDetailView.swift */; };
+		EB448A652C0BA19B00759436 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A642C0BA19B00759436 /* FeedDetailViewModel.swift */; };
 		EB448A672C0BA56000759436 /* FeedConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A662C0BA56000759436 /* FeedConstant.swift */; };
 		EB448A692C0BA61300759436 /* FeedResourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A682C0BA61300759436 /* FeedResourceProtocol.swift */; };
+		EB448A6C2C0BACD500759436 /* BucketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A6B2C0BACD500759436 /* BucketHelper.swift */; };
+		EB448A702C0BAE5000759436 /* FeedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A6F2C0BAE5000759436 /* FeedImageView.swift */; };
+		EB448A722C0BAE7400759436 /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB448A712C0BAE7400759436 /* FeedImageViewModel.swift */; };
 		EBAABAB42C0B842800071463 /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABAB32C0B842800071463 /* ServiceHelper.swift */; };
 		EBAABAB62C0B845B00071463 /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABAB52C0B845B00071463 /* ServiceEndpoint.swift */; };
 		EBAABAB82C0B847000071463 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAABAB72C0B847000071463 /* ServiceError.swift */; };
@@ -54,10 +57,13 @@
 		EB448A532C0B8CFB00759436 /* FeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTests.swift; sourceTree = "<group>"; };
 		EB448A562C0B954400759436 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		EB448A592C0B9C9900759436 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
-		EB448A622C0BA18300759436 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
-		EB448A642C0BA19B00759436 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		EB448A622C0BA18300759436 /* FeedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailView.swift; sourceTree = "<group>"; };
+		EB448A642C0BA19B00759436 /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
 		EB448A662C0BA56000759436 /* FeedConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConstant.swift; sourceTree = "<group>"; };
 		EB448A682C0BA61300759436 /* FeedResourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResourceProtocol.swift; sourceTree = "<group>"; };
+		EB448A6B2C0BACD500759436 /* BucketHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketHelper.swift; sourceTree = "<group>"; };
+		EB448A6F2C0BAE5000759436 /* FeedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageView.swift; sourceTree = "<group>"; };
+		EB448A712C0BAE7400759436 /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
 		EBAABAB32C0B842800071463 /* ServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		EBAABAB52C0B845B00071463 /* ServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
 		EBAABAB72C0B847000071463 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
@@ -117,7 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				EB448A562C0B954400759436 /* FeedView.swift */,
-				EB448A622C0BA18300759436 /* ImageDetailView.swift */,
+				EB448A6F2C0BAE5000759436 /* FeedImageView.swift */,
+				EB448A622C0BA18300759436 /* FeedDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,14 +133,24 @@
 			isa = PBXGroup;
 			children = (
 				EB448A592C0B9C9900759436 /* FeedViewModel.swift */,
-				EB448A642C0BA19B00759436 /* ImageDetailViewModel.swift */,
+				EB448A642C0BA19B00759436 /* FeedDetailViewModel.swift */,
+				EB448A712C0BAE7400759436 /* FeedImageViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB448A6A2C0BACC200759436 /* Bucket */ = {
+			isa = PBXGroup;
+			children = (
+				EB448A6B2C0BACD500759436 /* BucketHelper.swift */,
+			);
+			path = Bucket;
 			sourceTree = "<group>";
 		};
 		EBAABAB12C0B840A00071463 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EB448A6A2C0BACC200759436 /* Bucket */,
 				EBAABAB22C0B841000071463 /* Service */,
 			);
 			path = Core;
@@ -175,8 +192,8 @@
 		EBAABAC22C0B87C300071463 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				EBAABAC32C0B87F700071463 /* FeedServiceProtocol.swift */,
 				EB448A682C0BA61300759436 /* FeedResourceProtocol.swift */,
+				EBAABAC32C0B87F700071463 /* FeedServiceProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -388,6 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB448A702C0BAE5000759436 /* FeedImageView.swift in Sources */,
+				EB448A6C2C0BACD500759436 /* BucketHelper.swift in Sources */,
 				EB448A5A2C0B9C9900759436 /* FeedViewModel.swift in Sources */,
 				EBAABAB82C0B847000071463 /* ServiceError.swift in Sources */,
 				EBAABABA2C0B848D00071463 /* ServiceMethod.swift in Sources */,
@@ -395,16 +414,17 @@
 				EBAABAC42C0B87F700071463 /* FeedServiceProtocol.swift in Sources */,
 				EBADC4A92C0B7BC8000BA89D /* ContentView.swift in Sources */,
 				EBAABACE2C0B895F00071463 /* FeedService.swift in Sources */,
-				EB448A652C0BA19B00759436 /* ImageDetailViewModel.swift in Sources */,
+				EB448A652C0BA19B00759436 /* FeedDetailViewModel.swift in Sources */,
 				EBADC4A72C0B7BC8000BA89D /* FlickerImageApp.swift in Sources */,
 				EB448A692C0BA61300759436 /* FeedResourceProtocol.swift in Sources */,
 				EBAABAB62C0B845B00071463 /* ServiceEndpoint.swift in Sources */,
 				EBAABAC72C0B884C00071463 /* FeedResult.swift in Sources */,
+				EB448A722C0BAE7400759436 /* FeedImageViewModel.swift in Sources */,
 				EBAABAC92C0B88DD00071463 /* FeedItem.swift in Sources */,
 				EB448A572C0B954400759436 /* FeedView.swift in Sources */,
 				EBAABAB42C0B842800071463 /* ServiceHelper.swift in Sources */,
 				EBAABACB2C0B890E00071463 /* FeedItemMedia.swift in Sources */,
-				EB448A632C0BA18300759436 /* ImageDetailView.swift in Sources */,
+				EB448A632C0BA18300759436 /* FeedDetailView.swift in Sources */,
 				EB448A672C0BA56000759436 /* FeedConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlickerImage/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -598,6 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlickerImage/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

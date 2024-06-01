@@ -10,11 +10,12 @@ import Foundation
 struct FeedConstant {
     
     struct Format {
-        static let labelAndValue = "%@: %@"
+        static let dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     }
     
     struct Label {
         static let flickr = "Flickr"
+        static let emptyTitle = "Empty title"
         static let title = "Title"
         static let description = "Description"
         static let author = "Author"

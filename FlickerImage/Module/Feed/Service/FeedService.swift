@@ -24,4 +24,8 @@ final class FeedService: FeedServiceProtocol {
         return try await ServiceHelper.get(url: url, parameters: parameters)
     }
     
+    func image(url: String, localUrl: String) async throws -> ServiceResult<URL> {
+        return try await ServiceHelper.download(url: url, to: localUrl)
+    }
+    
 }

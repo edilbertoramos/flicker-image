@@ -9,39 +9,42 @@ import SwiftUI
 
 class FeedViewModel: ObservableObject {
     
-    @Published var items: [Int] = [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-    ]
+    @Published var items: Array<FeedItem> = []
+    @Published var selectedItem: FeedItem?
+    @Published var seachText: String = "" {
+        didSet {
+            handleSearch()
+        }
+    }
+    
+    private let service: FeedServiceProtocol
 
-    @Published var selectedItem: Int = 0
-
+    init(service: FeedServiceProtocol = FeedService()) {
+        self.service = service
+        handleSearch()
+    }
+    
+    func handleSearch() {
+        Task {
+            await getItems()
+        }
+    }
+    
+    func getItems() async {
+        do {
+            let response = try await service.feed(tags: seachText)
+            switch response.result {
+            case .success(let result):
+                DispatchQueue.main.async {
+                    self.items = result.items
+                    self.objectWillChange.send()
+                }
+            case .failure(let error):
+                debugPrint(error)
+            }
+        } catch {
+            debugPrint(error)
+        }
+    }
+    
 }
