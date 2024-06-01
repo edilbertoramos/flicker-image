@@ -37,7 +37,6 @@ class FeedViewModel: ObservableObject {
             case .success(let result):
                 DispatchQueue.main.async {
                     self.items = result.items
-                    self.objectWillChange.send()
                 }
             case .failure(let error):
                 debugPrint(error)
